@@ -1,27 +1,33 @@
 #include <stdio.h>
-int sum(int,int);
-int sub(int,int);
-int mult(int,int);
-float div(int,int);
-int main() {
-	int a,b;
-	printf("Enter two numbers: ");
-	scanf("%d %d",&a,&b);
-	printf("The sum of %d and %d is %d.\n",a,b,sum(a,b));
-	printf("The difference between %d and %d is %d.\n",a,b,sub(a,b));
-	printf("The product of %d and %d is %d.\n",a,b,mult(a,b));
-	printf("The quotient of %d and %d is %f.\n",a,b,div(a,b));
-	return 0;
-}
-int sum(int x, int y) {
-	return (x+y);
-}
-int sub(int x, int y) {
-	return (x-y);
-}
-int mult(int x, int y) {
-	return (x*y);
-}
-float div(int x, int y) {
-	return ((float)x/y);
-}
+double add(double, double);
+double sub(double, double);
+double div(double, double);
+double mul(double, double);
+int main()
+{
+  float a,b;
+  printf("Input two numbers:\n");
+  scanf("%f%f",&a,&b );
+  printf("Your addition of:     (%0.2f + %0.2f) = %0.2f\n",a,b,add(a,b) );
+  printf("Your substration of:  (%0.2f - %0.2f) = %0.2f\n",a,b,sub(a,b) );
+  printf("Your division of:     (%0.2f / %0.2f) = %0.2f\n",a,b,div(a,b) );
+  printf("Your multification of:(%0.2f * %0.2f) = %0.2f",a,b,mul(a,b) );
+  return 0;
+  }
+
+  double add(double a, double b)
+  {
+    return a+b;
+  }
+  double sub(double a, double b)
+  {
+    return a-b;
+  }
+  double div(double a, double b)
+  {
+    return a/b;
+  }
+  double mul(double a, double b)
+  {
+    return a*b;
+  }
